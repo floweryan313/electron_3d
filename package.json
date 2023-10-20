@@ -1,0 +1,54 @@
+{
+  "name": "electron_3d",
+  "version": "1.0.7",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch index.js --exec electron .  --trace-warnings",
+    "build-icon": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
+    "pack": "electron-builder",
+    "release": "cross-env GH_TOKEN=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 electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "floweryan",
+  "license": "MIT",
+  "dependencies": {
+    "electron-is-dev": "^2.0.0",
+    "electron-updater": "^6.1.4",
+    "signals": "^1.0.0",
+    "three.js": "^0.77.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^26.4.0",
+    "electron-builder": "^24.6.4",
+    "electron-icon-builder": "^2.0.1",
+    "electron-updater": "^6.1.4",
+    "nodemon": "^3.0.1",
+    "three.js": "^0.77.1",
+    "eslint": "^8.37.0",
+    "eslint-config-mdcs": "^5.0.0",
+    "eslint-plugin-compat": "^4.1.2",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.27.5"
+  },
+  "build": {
+    "appId": "this.is.tasky",
+    "productName": "Tasky",
+    "copyright": "Copyright © 2021 Alaso",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "nsis": {
+      "oneClick": false,
+      "language": "2052",
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "publish": {
+      "provider": "github",
+      "releaseType": "release"
+    }
+  }
+}

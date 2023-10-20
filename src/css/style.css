@@ -1,0 +1,28 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  body{
+    -webkit-app-region: drag;
+  }
+  .enable-click {
+    -webkit-app-region: no-drag;
+  }
+  #closeDom{
+    width:20px;
+    height: 20px;
+    border:1px solid #ccc;
+    text-align: center;
+    -webkit-app-region: no-drag;
+    position: absolute;
+    right: 20px;
+    top:20px;
+    cursor: pointer;
+  }
+  #closeDom1{
+    -webkit-app-region: no-drag;
+    padding:10px 0;
+    cursor: pointer;
+  }
